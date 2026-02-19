@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Menonin - 2 Años</title>
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            background-image: url('fondo2.png'); 
+            background-repeat: repeat;
+            animation: moverFondo 40s linear infinite;
+            color: #4a148c;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            /* Cursor de Hello Kitty */
+            cursor: url('https://cur.cursors-4u.net/anime/ani-12/ani1159.cur'), auto !important;
+            transition: background 1s ease; /* Para que la foto de fondo entre suave */
+        }
+
+        @keyframes moverFondo {
+            from { background-position: 0 0; }
+            to { background-position: 100% 100%; }
+        }
+
+        /* --- ESTILO KITTY Y SECCIONES --- */
+        section {
+            border: 3px solid #ffb7c5 !important;
+            border-radius: 30px !important;
+            background-color: rgba(255, 255, 255, 0.9) !important; /* Un poco transparente para ver el fondo */
+            box-shadow: 8px 8px 0px #ffccd5;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        h2 {
+            color: #fb3640;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* --- GALERÍA POLAROID --- */
+        .contenedor-polaroid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 10px 10px 25px 10px;
+            border: 1px solid #ddd;
+            box-shadow: 5px 10px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            max-width: 180px;
+            text-align: center;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            border-radius: 0; /* Estilo foto real */
+        }
+
+        .polaroid p {
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 0.8rem;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.1) rotate(0deg) !important;
+            z-index: 10;
+        }
+
+        .polaroid:nth-child(even) { transform: rotate(5deg); }
+        .polaroid:nth-child(odd) { transform: rotate(-5deg); }
+
+        /* --- RECUADRO DE JUEGO --- */
+        #contenedor-juego {
+            height: 250px; 
+            position: relative; 
+            background: #fff0f3; 
+            border-radius: 15px; 
+            border: 2px dashed #ffb7c5; 
+            overflow: hidden;
+        }
+
+        #moño {
+            font-size: 45px; 
+            position: absolute; 
+            cursor: pointer; 
+            left: 50%; 
+            top: 50%; 
+            transform: translate(-50%, -50%); 
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        /* --- ANIMACIÓN LLUVIA DE MOÑOS --- */
+        .moño-caida {
+            position: fixed;
+            top: -50px;
+            font-size: 30px;
+            z-index: 9999;
+            user-select: none;
+            pointer-events: none;
+            animation: caerMoño 3s linear forwards;
+        }
+
+        @keyframes caerMoño {
+            to { transform: translateY(105vh) rotate(360deg); }
+        }
+
+        /* --- OTROS COMPONENTES --- */
+        .reloj-contenedor {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ec407a;
+            background-color: #fff5f8;
+            padding: 10px;
+            border: 2px solid #f8bbd0;
+            border-radius: 10px;
+        }
+
+        .maquina-escribir {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            text-align: left;
+            padding: 15px;
+            white-space: pre-wrap;
+        }
+
+        .boton-link {
+            display: inline-block;
+            background-color: #ec407a;
+            color: white;
+            padding: 12px 25px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>💗 ¡Felices 2 Años, Mi Menonin! 💗</h1>
+        <p>Eres lo mejor que me ha pasado en la vida.</p>
+    </header>
+
+    <section>
+        <h2>Nuestro Tiempo Juntos ⏳</h2>
+        <div id="reloj" class="reloj-contenedor">Calculando...</div>
+        <p>Desde el 29 de febrero de 2024 a las 9:00 PM</p>
+    </section>
+
+    <section style="max-width: 800px;">
+        <h2>Nuestros Momentos Favoritos 📸</h2>
+        <div class="contenedor-polaroid">
+            <div class="polaroid">
+                <img src="foto1.png" alt="Foto 1">
+                <p>por mas salidas y comidaaaaa!! 💗✨🍝🍗</p>
+            </div>
+            <div class="polaroid">
+                <img src="foto2.jpg" alt="Foto 2">
+                <p>riooooo!! amo pedir dulces a tu lado 🎃💗</p>
+            </div>
+            <div class="polaroid">
+                <img src="foto3.jpg" alt="Foto 3">
+                <p>vivan las navidades contigo ✨🎄💗</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Para nosotros 🎵</h2>
+        <a href="https://youtu.be/Rvaggx1Pnoo?si=HR_cz6uFg8YgCOFf" target="_blank" class="boton-link">Nuestra Canción</a>
+        <a href="tel:5540655508" class="boton-link" style="background-color: #25d366;">📞 Llamar a Naniel</a>
+    </section>
+
+    <section style="background-color: #fff0f3;">
+        <h2>Una carta para ti...</h2>
+        <div id="carta-escrita" class="maquina-escribir"></div>
+    </section>
+
+    <section>
+        <h2>¿Necesitas una razón?</h2>
+        <button onclick="generarRazon()" style="font-size: 50px; background: none; border: none; cursor: pointer;">
+            💖
+        </button>
+        <div id="mensaje-sorpresa" style="margin-top: 20px; font-size: 1.3rem; font-weight: bold; color: #d81b60;"></div>
+    </section>
+
+    <section id="juego-moño">
+        <h3>¡Atrapa el moño de Hello Kitty! 🎀</h3>
+        <p id="contador-moños">Atrapados: 0/3</p>
+        <div id="contenedor-juego">
+            <div id="moño" onclick="atraparMoño()">🎀</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Hecho con amor para Wendolin • 2026</p>
+    </footer>
+
+    <script>
+        // --- CONTADOR ---
+        function actualizarContador() {
+            const fechaInicio = new Date(2024, 1, 29, 21, 0, 0); 
+            const ahora = new Date();
+            const diferencia = ahora - fechaInicio;
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+            document.getElementById("reloj").innerHTML = dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
+        }
+        setInterval(actualizarContador, 1000);
+
+        // --- MÁQUINA DE ESCRIBIR ---
+        const textoCarta = `Hola Mi niña hermosa, Wendolin...
+        
+¡Felices 2 años de tantas aventuras juntos! Gracias por compartir tu tiempo, tus risas y tu amor conmigo. Cada día a tu lado es mejor que el anterior.
+
+Espero que te guste este pequeño detalle que programé para ti, jamas olvides q eres y siempre seras mi 11:11 y mi mas grande amor y orgullo mi niña.
+
+Te amo mucho. 💗🥺✨`;
+
+        let charIndex = 0;
+        function escribirCarta() {
+            if (charIndex < textoCarta.length) {
+                document.getElementById("carta-escrita").innerHTML += textoCarta.charAt(charIndex);
+                charIndex++;
+                setTimeout(escribirCarta, 50);
+            }
+        }
+
+        // --- JUEGO DEL MOÑO ---
+        let atrapados = 0;
+        function moverMoño() {
+            const moño = document.getElementById('moño');
+            const contenedor = document.getElementById('contenedor-juego');
+            const anchoMax = contenedor.clientWidth - moño.clientWidth;
+            const altoMax = contenedor.clientHeight - moño.clientHeight;
+            const x = Math.floor(Math.random() * anchoMax);
+            const y = Math.floor(Math.random() * altoMax);
+            moño.style.left = x + "px";
+            moño.style.top = y + "px";
+        }
+
+        function lluviaDeMoños() {
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const m = document.createElement('div');
+                    m.innerHTML = '🎀';
+                    m.className = 'moño-caida';
+                    m.style.left = Math.random() * 100 + 'vw';
+                    m.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    document.body.appendChild(m);
+                    setTimeout(() => m.remove(), 4000);
+                }, i * 100);
+            }
+        }
+
+        function atraparMoño() {
+            atrapados++;
+            document.getElementById('contador-moños').innerHTML = "Atrapados: " + atrapados + "/3";
+            
+            if (atrapados < 3) {
+                moverMoño();
+            } else {
+                document.getElementById('moño').style.display = 'none';
+                setTimeout(() => {
+                    alert("¡Felicidades! Eres tan linda como Hello Kitty. ❤️");
+                    document.getElementById('juego-moño').innerHTML = "<h3>¡Lo lograste! 🎀</h3><p>Te amo, Wendolin.</p>";
+                    
+                    // CAMBIO DE FONDO A TU FOTO
+                    document.body.style.backgroundImage = "url('fondo2.jpg')"; // Aquí pon tu foto de fondo
+                    document.body.style.backgroundSize = "cover";
+                    document.body.style.backgroundAttachment = "fixed";
+                    document.body.style.animation = "none"; 
+                    
+                    lluviaDeMoños();
+                }, 200);
+            }
+        }
+
+        // --- RAZONES ---
+        function generarRazon() {
+            const razones = [    
+        "Porque tienes la sonrisa más bonita del mundo.",
+        "Por la forma en la que me cuidas siempre.",
+        "Porque cada momento a tu lado es una aventura.",
+        "Por cómo me haces reír incluso en los días malos.",
+        "Porque eres mi persona favorita en todo el universo.",
+        "Por tu paciencia y tu gran corazón.",
+        "Porque simplemente eres tú, y eso es perfecto.",
+        "Porque me encanta nuestro futuro juntos.",
+        "Por tus ojitos hermosos",
+        "Por todo lo que luchas",
+        "Por tu valentia y orgullo",
+        "Por el apoyo que me das",
+        "Por siempre estar conmigo"];
+            const mensajeDiv = document.getElementById("mensaje-sorpresa");
+            mensajeDiv.innerHTML = razones[Math.floor(Math.random() * razones.length)];
+        }
+
+        window.onload = function() {
+            actualizarContador();
+            escribirCarta();
+            moverMoño();
+        };
+    </script>
+</body>
+</html>
