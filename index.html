@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script>
+    function pedirContraseña() {
+        // --- AQUÍ ELIGES LA CONTRASEÑA ---
+        var contraseñaCorrecta = "03:16"; 
+        
+        var contraseña = prompt("Por favor, ingresa la clave secreta para ver la sorpresa:");
+        
+        if (contraseña !== contraseñaCorrecta) {
+            alert("Clave incorrecta. ¡Solo personas especiales pueden entrar!");
+            document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px; font-family:sans-serif;'>Acceso Denegado 🔒</h1>";
+        }
+    }
+    // Ejecuta la función al cargar la página
+    pedirContraseña();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Menonin - 2 Años</title>
@@ -321,4 +336,5 @@ Te amo mucho. 💗🥺✨`;
         };
     </script>
 </body>
+
 </html>
